@@ -1,32 +1,55 @@
-import React, { Component } from 'react';
 
+import SplashScreen from './app/screens/SplashScreen/index.js'
+import LoginScreen from './app/screens/MainMenuScreen/index.js';
+
+import React, { Component } from 'react';
 import {
-    StyleSheet,
-    View,
-    Text,
-    FlatList,
-    Image,
-    TouchableHighlight,
-    ActivityIndicator,
-    StatusBar
+
+  StyleSheet,
+  View,
+  Text,
+  AsyncStorage
+ 
 } from 'react-native';
 
-import SplashScreen from './app/screens/SplashScreen/index'
 
+export default class App extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: true
+    }
+  
+  }
+  performTimeConsumingTask = async () => {
+    return new Promise(resolve =>
+      setTimeout(() => {
+        resolve('result');
+      }, 3000),
+    );
+  };
+  async componentDidMount() {
+   
+    const data = await this.performTimeConsumingTask();
 
-export default class App extends Component {
-    render() {
-        return (
-            <View >
-              <SplashScreen/>
-
-
-            </View>
-        );
-
+    if (data !== null) {
+      this.setState({ isLoading: false });
 
     }
-}
+  }
+ render(){
+  if (this.state.isLoading) {
+    return <SplashScreen />;
+   }
+  else {
+    return (
+      <LoginScreen/>
+    );
+   }
+ }
+};
+
+
 
 
 
