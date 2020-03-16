@@ -2,7 +2,7 @@ import { Dimensions } from "react-native";
 
 export default {
     SplashContaner: {
-      width:Dimensions.get('window').width,
+      width:'100%',
       height:Dimensions.get('window').height,
         justifyContent: 'center',
         alignItems: 'center',
@@ -21,7 +21,7 @@ export default {
         marginTop:0
       },
       text: {
-        color: 'Black',
+        color: '#000',
         fontSize: 40,
         fontWeight: 'bold',
         marginBottom: 150,

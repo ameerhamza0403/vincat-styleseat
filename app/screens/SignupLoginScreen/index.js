@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import {
     StyleSheet,
     View,
@@ -10,18 +11,24 @@ import {
     TouchableHighlight,
     ActivityIndicator,
     StatusBar,
-    ScrollView
+    ScrollView,
+    Dimensions
 } from 'react-native';
 
 import styles from './Styles'
+import SignupLoginTabs from '../SignupLoginTabs/index'
 
 
 export default class SignupLoginScreen extends Component {
-    render() {
-        return (
+    
+      
+    render ()
+    {
+    return (
 
             <ScrollView>
-<View style={styles.MainContainer}>
+<View style={[styles.MainContainer,{width:'100%',
+        height:Dimensions.get('window').height,}]}>
                 <StatusBar backgroundColor="#000" barStyle="light-content"></StatusBar>
 
 
@@ -93,6 +100,7 @@ export default class SignupLoginScreen extends Component {
                  Last minute appointments available
                         </Text>
                     </View>
+                    
                 </View>
 
 
@@ -115,7 +123,7 @@ Signup
 
                     <View style={styles.btnCont} >
                        
-<TouchableHighlight onPress={() => navigation.navigate('SignupLogin')} >
+<TouchableHighlight  >
 <Text style={{ color: 'white', fontSize: 10, }}>
 
 
@@ -151,8 +159,33 @@ Skip
         );
 
 
-    }
+    
 }
+}
+
+
+
+// const Stack = createStackNavigator();
+
+// function App() {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator
+//       screenOptions={{
+//         headerShown: false
+//       }}
+//       >
+//         <Stack.Screen name="Home" component={SignupLoginScreen} />
+        
+//         <Stack.Screen name="SignupLogin" component={SignupLoginTabs} />
+      
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+
+// export default App;
+
 
 
 

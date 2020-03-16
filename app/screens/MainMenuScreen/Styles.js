@@ -2,7 +2,8 @@ export default {
     MainContainer: {
         flex: 1,
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
+      
 
 
     },

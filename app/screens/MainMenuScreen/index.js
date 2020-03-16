@@ -12,7 +12,8 @@ import {
     ActivityIndicator,
     StatusBar,
     TouchableOpacity,
-    ImageBackground
+    ImageBackground,ScrollView,
+    Dimensions
 } from 'react-native';
 
 import styles from './Styles'
@@ -21,7 +22,11 @@ import styles from './Styles'
 function MainMenuScreen ({navigation}) {
    
         return (
-            <View style={styles.MainContainer}>
+
+          <ScrollView>
+
+<View style={[styles.MainContainer,{width:'100%',
+        height:Dimensions.get('window').height}]}>
                 <StatusBar backgroundColor="#000" barStyle="light-content"></StatusBar>
 
 
@@ -38,11 +43,28 @@ function MainMenuScreen ({navigation}) {
                         marginTop: 30,
                         width: '70%',
                         height: 50,
-                        alignItems: 'center', justifyContent: 'center', borderRadius: 20
+                        alignItems: 'center', justifyContent: 'center', borderRadius: 10
                     }} >
                        
 <TouchableHighlight onPress={() => navigation.navigate('SignupLogin')} >
-<Text style={{ color: 'white', fontSize: 17, }}>
+<Text style={{ color: 'white', fontSize: 12, }}>
+
+DISCOVER SERVICES
+</Text>
+
+</TouchableHighlight>
+                    </View>
+
+                    <View style={{
+                        backgroundColor: '#000',
+                        marginTop: 30,
+                        width: '70%',
+                        height: 50,
+                        alignItems: 'center', justifyContent: 'center', borderRadius: 10
+                    }} >
+                       
+<TouchableHighlight onPress={() => navigation.navigate('SignupLogin')} >
+<Text style={{ color: 'white', fontSize: 12, }}>
 
 
 SET UP YOUR BUSINESS
@@ -66,7 +88,9 @@ SET UP YOUR BUSINESS
 
 
             </View>
-        );
+
+          </ScrollView>
+                 );
 
 
     
