@@ -1,6 +1,6 @@
 
 import SplashScreen from './app/screens/SplashScreen/index.js'
-import LoginScreen from './app/screens/MainMenuScreen/index.js';
+import MainMenu from './app/screens/MainMenuScreen/index.js';
 
 import React, { Component } from 'react';
 import {
@@ -43,7 +43,7 @@ export default class App extends Component{
    }
   else {
     return (
-      <LoginScreen/>
+      <MainMenu/>
     );
    }
  }

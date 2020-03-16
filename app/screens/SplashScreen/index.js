@@ -23,10 +23,8 @@ export default class SplashScreen extends Component {
     return (
         <ScrollView>
  <View style={styles.SplashContaner}>
-          <StatusBar
-            backgroundColor="#000"
-            barStyle="light-content"></StatusBar>
-         
+ <StatusBar backgroundColor="#000" barStyle="light-content"></StatusBar>
+
   
           <View style={styles.textCon}>
             <Text style={styles.text}> Vincat StyleSeat  </Text>
