@@ -26,7 +26,7 @@ export default class LoginScreen extends Component {
                 <View>
 
                     <Text>
-                        Home
+                        Login
             </Text>
                 </View>
 

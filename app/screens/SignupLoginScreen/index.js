@@ -19,12 +19,11 @@ import styles from './Styles'
 import SignupLoginTabs from '../SignupLoginTabs/index'
 
 
-export default class SignupLoginScreen extends Component {
-    
-      
-    render ()
-    {
-    return (
+
+export default function SignupLoginScreen ({navigation}) {
+
+   
+  return (
 
             <ScrollView>
 <View style={[styles.MainContainer,{width:'100%',
@@ -111,7 +110,7 @@ export default class SignupLoginScreen extends Component {
 
 <View style={styles.btnCont} >
                        
-<TouchableHighlight onPress={() => navigation.navigate('SignupLogin')} >
+<TouchableHighlight onPress={() => navigation.navigate('Signup')}>
 <Text style={{ color: 'white', fontSize: 10, }}>
 
 
@@ -123,7 +122,7 @@ Signup
 
                     <View style={styles.btnCont} >
                        
-<TouchableHighlight  >
+<TouchableHighlight  onPress={() => navigation.navigate('Login')}  >
 <Text style={{ color: 'white', fontSize: 10, }}>
 
 
@@ -160,32 +159,6 @@ Skip
 
 
     
+
 }
-}
-
-
-
-// const Stack = createStackNavigator();
-
-// function App() {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator
-//       screenOptions={{
-//         headerShown: false
-//       }}
-//       >
-//         <Stack.Screen name="Home" component={SignupLoginScreen} />
-        
-//         <Stack.Screen name="SignupLogin" component={SignupLoginTabs} />
-      
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   );
-// }
-
-// export default App;
-
-
-
 

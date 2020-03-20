@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import SignupLogin from '../SignupLoginScreen/index'
+import SignupLoginScreen from '../SignupLoginScreen/index'
 import {
     StyleSheet,
     View,
@@ -18,8 +18,8 @@ import {
 
 import styles from './Styles'
 
-
-function MainMenuScreen ({navigation}) {
+export default function MainMenuScreen ({navigation})  {
+  
    
         return (
 
@@ -46,7 +46,7 @@ function MainMenuScreen ({navigation}) {
                         alignItems: 'center', justifyContent: 'center', borderRadius: 10
                     }} >
                        
-<TouchableHighlight onPress={() => navigation.navigate('SignupLogin')} >
+<TouchableHighlight onPress={() => navigation.navigate('LoginSignup')} >
 <Text style={{ color: 'white', fontSize: 12, }}>
 
 DISCOVER SERVICES
@@ -63,7 +63,7 @@ DISCOVER SERVICES
                         alignItems: 'center', justifyContent: 'center', borderRadius: 10
                     }} >
                        
-<TouchableHighlight onPress={() => navigation.navigate('SignupLogin')} >
+<TouchableHighlight  >
 <Text style={{ color: 'white', fontSize: 12, }}>
 
 
@@ -97,26 +97,5 @@ SET UP YOUR BUSINESS
 }
 
 
-const Stack = createStackNavigator();
 
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator
-      screenOptions={{
-        headerShown: false
-      }}
-      >
-        <Stack.Screen name="Home" component={MainMenuScreen} 
-        
-    
-        />
-        
-        <Stack.Screen name="SignupLogin" component={SignupLogin} />
-      
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
 
-export default App;

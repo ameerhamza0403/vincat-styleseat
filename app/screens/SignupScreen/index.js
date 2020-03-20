@@ -26,7 +26,7 @@ export default class SignupScreen extends Component {
                 <View>
 
                     <Text>
-                        Home
+                       Signup
             </Text>
                 </View>
 
