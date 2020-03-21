@@ -82,7 +82,7 @@ Continue with Facebook
 
 <Text style={{ color: 'white', fontSize: 12, }}>
 
-Continue with Facebook
+Continue with Gmail
 </Text>
 
 </TouchableHighlight>
