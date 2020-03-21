@@ -86,9 +86,9 @@ function SplashScreen (props) {
         justifyContent: 'center',
         alignItems: 'center',
         flex: 1,}}>
-          <StatusBar backgroundColor="#000" barStyle="light-content"></StatusBar>
+          <StatusBar backgroundColor="#9C26B0" barStyle="light-content"></StatusBar>
 
-<LinearGradient colors={['#000428', '#004e92']} style={{ 
+<LinearGradient colors={['#9C26B0', '#AF2489']} style={{ 
     flex: 1,
     width:'100%',
     alignItems:'center',

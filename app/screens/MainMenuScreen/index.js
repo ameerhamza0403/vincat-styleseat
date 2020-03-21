@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SignupLoginScreen from '../SignupLoginScreen/index'
+import LinearGradient from 'react-native-linear-gradient';
+
 import {
     StyleSheet,
     View,
@@ -27,24 +29,32 @@ export default function MainMenuScreen ({navigation})  {
 
 <View style={[styles.MainContainer,{width:'100%',
         height:Dimensions.get('window').height}]}>
-                <StatusBar backgroundColor="#000" barStyle="light-content"></StatusBar>
+          <StatusBar backgroundColor="#9C26B0" barStyle="light-content"></StatusBar>
 
 
 
-                <ImageBackground
-                    style={{ width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center' }}
-                    source={require('../../../assets/images/appBackground.jpg')}>
+          <LinearGradient colors={['#9C26B0', '#AF2489',]} style={styles.gradientBack}>
+          <View style={{marginTop:150}}>
 
+<Text style={{ color: 'white', fontSize: 25, }}>
 
+Welcome
+</Text>
+</View>
 
+<View style={{marginTop:30 ,}}>
 
-                    <View style={{
-                        backgroundColor: '#000',
-                        marginTop: 30,
-                        width: '70%',
-                        height: 50,
-                        alignItems: 'center', justifyContent: 'center', borderRadius: 10
-                    }} >
+<Text style={{ color: 'white', fontSize: 15, alignContent:'center',justifyContent:'center'}}>
+
+Discover & Book Beauty  & Barber Appointments
+</Text>
+</View>
+
+<View style={{marginTop:150,width:'80%',alignContent:'center'}}>
+
+<View style={styles.btnBack
+                      
+                    } >
                        
 <TouchableHighlight onPress={() => navigation.navigate('LoginSignup')} >
 <Text style={{ color: 'white', fontSize: 12, }}>
@@ -55,13 +65,8 @@ DISCOVER SERVICES
 </TouchableHighlight>
                     </View>
 
-                    <View style={{
-                        backgroundColor: '#000',
-                        marginTop: 30,
-                        width: '70%',
-                        height: 50,
-                        alignItems: 'center', justifyContent: 'center', borderRadius: 10
-                    }} >
+                    <View style={
+                    styles.btnBack} >
                        
 <TouchableHighlight  >
 <Text style={{ color: 'white', fontSize: 12, }}>
@@ -79,10 +84,15 @@ SET UP YOUR BUSINESS
 
 
 
+</View>
+           
 
 
 
-                </ImageBackground>
+
+
+
+                    </LinearGradient>
 
 
 

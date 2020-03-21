@@ -9,14 +9,17 @@ export default {
     },
     btnBack:{
         borderColor:'#000',
-        borderRadius:30,
-    
+        borderRadius:20,
+        borderWidth:1,
+    width:'100%',
         marginTop:20,
         height:50,
-        backgroundColor:'#000',
+borderColor:'#fff',
         alignItems:'center',
         justifyContent:'center',
         justifyContent:'center'
+
+
       
     },   buttonContainer :{
         alignItems:'center',
@@ -25,6 +28,13 @@ export default {
     },
     text:{
         color:'white',
+        
+    },
+    gradientBack:{
+        flex: 1,
+        width:'100%',
+        alignItems:'center',
+        flex:1,
         
     }
 

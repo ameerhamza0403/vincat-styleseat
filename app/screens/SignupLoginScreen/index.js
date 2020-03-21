@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import LinearGradient from 'react-native-linear-gradient';
 import {
     StyleSheet,
     View,
@@ -28,9 +29,11 @@ export default function SignupLoginScreen ({navigation}) {
             <ScrollView>
 <View style={[styles.MainContainer,{width:'100%',
         height:Dimensions.get('window').height,}]}>
-                <StatusBar backgroundColor="#000" barStyle="light-content"></StatusBar>
+               <StatusBar backgroundColor="#9C26B0" barStyle="light-content"></StatusBar>
 
 
+
+<LinearGradient colors={['#9C26B0', '#AF2489',]} style={styles.gradientBack}>
 
 
                 <View style={{ marginTop: 100 }}>
@@ -41,7 +44,7 @@ export default function SignupLoginScreen ({navigation}) {
                 </View>
 
                 <View style={styles.viewsCont}>
-                    <Icon name="calendar-blank" size={40} color="#000"  style={{marginRight:10}}/>
+                    <Icon name="calendar-blank" size={40} color="#fff"  style={{marginRight:10}}/>
 
                     <View>
 
@@ -57,7 +60,7 @@ export default function SignupLoginScreen ({navigation}) {
 
                 
                 <View style={styles.viewsCont}>
-                    <Icon name="cellphone" size={40} color="#000"  style={{marginRight:10}} />
+                    <Icon name="cellphone" size={40} color="#fff"  style={{marginRight:10}} />
 
                     <View>
 
@@ -72,7 +75,7 @@ export default function SignupLoginScreen ({navigation}) {
                 </View>
 
                 <View style={styles.viewsCont}>
-                    <Icon name="book" size={40} color="#000"  style={{marginRight:10}} />
+                    <Icon name="book" size={40} color="#fff"  style={{marginRight:10}} />
 
                     <View>
 
@@ -87,7 +90,7 @@ export default function SignupLoginScreen ({navigation}) {
                 </View>
 
                 <View style={styles.viewsCont}>
-                    <Icon name="thumb-up" size={40} color="#000" style={{marginRight:10}}/>
+                    <Icon name="thumb-up" size={40} color="#fff" style={{marginRight:10}}/>
 
                     <View>
 
@@ -111,7 +114,7 @@ export default function SignupLoginScreen ({navigation}) {
 <View style={styles.btnCont} >
                        
 <TouchableHighlight onPress={() => navigation.navigate('Signup')}>
-<Text style={{ color: 'white', fontSize: 10, }}>
+<Text style={{ color: '#000', fontSize: 10, }}>
 
 
 Signup
@@ -123,7 +126,7 @@ Signup
                     <View style={styles.btnCont} >
                        
 <TouchableHighlight  onPress={() => navigation.navigate('Login')}  >
-<Text style={{ color: 'white', fontSize: 10, }}>
+<Text style={{ color: '#000', fontSize: 10, }}>
 
 
 Login
@@ -138,7 +141,7 @@ Login
 
     <TouchableHighlight>
 
-    <Text>
+    <Text style={{color:'#fff'}}>
 
 Skip
 </Text>
@@ -148,6 +151,7 @@ Skip
 </View>
 
 
+</LinearGradient>
 
 
 

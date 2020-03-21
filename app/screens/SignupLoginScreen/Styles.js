@@ -6,14 +6,14 @@ export default {
 
     },
     text: {
-        color: '#000',
+        color: '#fff',
         fontSize: 30,
         fontWeight: 'bold',
         marginBottom: 70,
         fontFamily: 'AmericanTypewriter-Light' 
       },
       headingText: {
-        color: '#000',
+        color: '#fff',
         fontSize: 12,
         fontWeight: 'bold',
         width:200,
@@ -21,7 +21,7 @@ export default {
         fontFamily: 'AmericanTypewriter-Light' 
       },
       desText:{
-        color: '#000',
+        color: '#fff',
         fontSize: 11,
         width:210,
         fontFamily: 'AmericanTypewriter-Light'
@@ -38,10 +38,17 @@ export default {
       },
       btnCont:{
           margin:20,
-        backgroundColor: '#000',
+        backgroundColor: '#fff',
         marginTop: 10,
         width: 80,
         height: 40,
         alignItems: 'center', justifyContent: 'center'
-      }
+      },
+      gradientBack:{
+        flex: 1,
+        width:'100%',
+        alignItems:'center',
+        flex:1,
+        
+    }
 }
