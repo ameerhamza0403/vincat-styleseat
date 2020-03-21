@@ -11,6 +11,7 @@ import {
   Dimensions
  
 } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 
 
@@ -85,11 +86,19 @@ function SplashScreen (props) {
         justifyContent: 'center',
         alignItems: 'center',
         flex: 1,}}>
-<StatusBar backgroundColor="#000" barStyle="light-content"></StatusBar>
+          <StatusBar backgroundColor="#000" barStyle="light-content"></StatusBar>
 
+<LinearGradient colors={['#000428', '#004e92']} style={{ 
+    flex: 1,
+    width:'100%',
+    alignItems:'center',
+    justifyContent:'center'
+    }}>
 
-        <View style={styles.textCon}>
-          <Text style={{    color: '#1488CC',
+  
+
+<View >
+          <Text style={{    color: '#fff',
         fontSize: 40,
         fontWeight: 'bold',
         marginBottom: 150,
@@ -99,14 +108,19 @@ function SplashScreen (props) {
     
           <View style={{ width:20,
        height:20,
+       marginTop:50,
        
       
         alignItems: 'center',}}>
            < MaterialIndicator
-                color="#1488CC"/>
+                color="#fff"/>
           </View>
         
-      </View>
+   
+ 
+</LinearGradient>
+
+   </View>
       </ScrollView>
      
     );

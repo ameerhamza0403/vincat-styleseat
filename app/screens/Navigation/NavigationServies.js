@@ -3,7 +3,7 @@ import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import SplashScreen from '../SplashScreen/index.js'
+
 
 import MainMenuScreen from '../MainMenuScreen/index.js'
 import LoginSignupScreen from '../SignupLoginScreen/index.js'
