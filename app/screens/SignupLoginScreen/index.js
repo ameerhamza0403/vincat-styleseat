@@ -21,8 +21,8 @@ import SignupLoginTabs from '../SignupLoginTabs/index'
 
 
 
-export default function SignupLoginScreen ({navigation}) {
-
+export default class  SignupLoginScreen extends React.Component {
+render() {
    
   return (
 
@@ -113,7 +113,7 @@ export default function SignupLoginScreen ({navigation}) {
 
 <View style={styles.btnCont} >
                        
-<TouchableHighlight onPress={() => navigation.navigate('Signup')}>
+<TouchableHighlight onPress={() => this.props.navigation.navigate('Signup')}>
 <Text style={{ color: '#000', fontSize: 10, }}>
 
 
@@ -125,7 +125,7 @@ Signup
 
                     <View style={styles.btnCont} >
                        
-<TouchableHighlight  onPress={() => navigation.navigate('Login')}  >
+<TouchableHighlight  onPress={() => this.props.navigation.navigate('Login')}  >
 <Text style={{ color: '#000', fontSize: 10, }}>
 
 
@@ -166,3 +166,4 @@ Skip
 
 }
 
+}

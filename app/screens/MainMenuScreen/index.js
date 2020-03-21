@@ -20,9 +20,9 @@ import {
 
 import styles from './Styles'
 
-export default function MainMenuScreen ({navigation})  {
+export default class MainMenuScreen extends React.Component {
   
-   
+   render(){
         return (
 
           <ScrollView>
@@ -56,7 +56,7 @@ Discover & Book Beauty  & Barber Appointments
                       
                     } >
                        
-<TouchableHighlight onPress={() => navigation.navigate('LoginSignup')} >
+<TouchableHighlight onPress={() => this.props.navigation.navigate('LoginSignup')} >
 <Text style={{ color: 'white', fontSize: 12, }}>
 
 DISCOVER SERVICES
@@ -104,6 +104,7 @@ SET UP YOUR BUSINESS
 
 
     
+}
 }
 
 

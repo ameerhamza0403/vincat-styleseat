@@ -9,6 +9,7 @@ import MainMenuScreen from '../MainMenuScreen/index.js'
 import LoginSignupScreen from '../SignupLoginScreen/index.js'
 import LoginScreen from '../LoginScreen/index'
 import SignupScreen from  '../SignupScreen/index.js'
+import HomeScreen from '../HomeScreen/index.js'
 
 
 
@@ -43,6 +44,11 @@ function MainStackNavigator() {
 <Stack.Screen
           name='Signup'
           component={SignupScreen}
+                  />
+
+<Stack.Screen
+          name='HomeScreen'
+          component={HomeScreen}
                   />
       </Stack.Navigator>
 

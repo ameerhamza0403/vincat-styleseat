@@ -21,9 +21,9 @@ import {
 
 import styles from './Styles'
 
-export default function SignupScreen({navigation})  {
+export default class LoginScreen extends React.Component  {
   
-   
+   render() {
         return (
 
           <ScrollView>
@@ -58,7 +58,7 @@ Login your Account
   source={require ('../../../assets/images/facebook.png')}
   />
                        
-<TouchableHighlight onPress={() => navigation.navigate('LoginSignup')} >
+<TouchableHighlight  >
 
 
 <Text style={{ color: 'white', fontSize: 12, }}>
@@ -77,7 +77,7 @@ Continue with Facebook
   source={require ('../../../assets/images/gmail.png')}
   />
                        
-<TouchableHighlight onPress={() => navigation.navigate('LoginSignup')} >
+<TouchableHighlight >
 
 
 <Text style={{ color: 'white', fontSize: 12, }}>
@@ -117,7 +117,7 @@ Continue with Gmail
                       
                     } >
                        
-<TouchableHighlight onPress={() => navigation.navigate('LoginSignup')} >
+<TouchableHighlight onPress={() => this.props.navigation.navigate('HomeScreen')} >
  
 <Text style={{ color: 'white', fontSize: 12, }}>
 
@@ -164,3 +164,4 @@ Forget Password? Click here.
 
 
 
+}

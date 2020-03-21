@@ -21,7 +21,9 @@ import {
 
 import styles from './Styles'
 
-export default function SignupScreen({navigation})  {
+export default class  SignupScreen extends React.Component {
+
+  render () {
   
    
         return (
@@ -77,7 +79,7 @@ Continue with Facebook
   source={require ('../../../assets/images/gmail.png')}
   />
                        
-<TouchableHighlight onPress={() => navigation.navigate('LoginSignup')} >
+<TouchableHighlight onPress={() => this.props.navigation.navigate('LoginSignup')} >
 
 
 <Text style={{ color: 'white', fontSize: 12, }}>
@@ -164,3 +166,4 @@ By signing up , i am agree with TERMS & CONDITIONS
 
 
 
+}
