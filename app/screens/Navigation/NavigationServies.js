@@ -7,24 +7,21 @@ import LoginSignupScreen from '../SignupLoginScreen/index.js'
 import LoginScreen from '../LoginScreen/index'
 import SignupScreen from  '../SignupScreen/index.js'
 import HomeScreen from '../HomeScreen/index.js'
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from '@react-navigation/drawer';
 
 
 
-
-
-
-// const Drawer = createDrawerNavigator();
-
-//  function App() {
-//   return (
-//     <NavigationContainer>
-//       <Drawer.Navigator initialRouteName="Home">
-//         <Drawer.Screen name="Home" component={HomeScreen} />
-//         <Drawer.Screen name="Signup" component={SignupScreen} />
-//       </Drawer.Navigator>
-//     </NavigationContainer>
-//   );
-//   }
+const DrawerNavigator = createDrawerNavigator();
+const Drawer = () => (
+    <DrawerNavigator.Navigator initialRouteName="HomeScreen">
+        <DrawerNavigator.Screen name="HomeScreen" component={HomeScreen}/>
+    </DrawerNavigator.Navigator>
+);
   
 const Stack = createStackNavigator()
 
@@ -37,8 +34,15 @@ function MainStackNavigator() {
       }}
       >
         
+        {/* <Stack.Screen
+          name='Drawer'
+          component={Drawer}
+        
+          
+        /> */}
+
         <Stack.Screen
-          name='Home'
+         name='Home'
           component={MainMenuScreen}
         
           
@@ -63,6 +67,7 @@ function MainStackNavigator() {
           name='HomeScreen'
           component={HomeScreen}
                   />
+           
       </Stack.Navigator>
 
       

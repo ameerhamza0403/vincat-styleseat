@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import { Dropdown } from 'react-native-material-dropdown';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import {
+    createDrawerNavigator,
+    DrawerContentScrollView,
+    DrawerItemList,
+    DrawerItem,
+  } from '@react-navigation/drawer';
 
 import {
     StyleSheet,
@@ -10,17 +17,22 @@ import {
     TouchableHighlight,
     ActivityIndicator,
     StatusBar,ScrollView,
-    TextInput
+    TextInput,
+    Picker
 } from 'react-native';
 
 import {Card} from 'react-native-shadow-cards';
 
 import styles from './Styles'
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+
+
 
 
 
 export default class HomeScreen extends Component {
     render() {
+     
 
         let whatData = [{
             value: 'Type 1',
@@ -33,9 +45,32 @@ export default class HomeScreen extends Component {
             
             
             <ScrollView>
+             
             
             <View style={styles.MainContainer}>
-                <StatusBar backgroundColor="#24A0ED" barStyle="light-content"></StatusBar>
+            <StatusBar backgroundColor="#9C26B0" barStyle="light-content"></StatusBar>
+        
+        
+        
+                <View  style={{alignItems:'center',flexDirection:'row',width:'100%',height:50,backgroundColor:'#9C26B0'}}>
+
+<TouchableWithoutFeedback>
+
+<Icon
+            name ={'menu'} color={'white'} size={40}/>
+</TouchableWithoutFeedback>
+
+<View style={{ alignItems:'center',
+justifyContent:'center',flex:.9}}>
+
+
+<Text style={[styles.heading,{color:'white',marginLeft:0}]}>
+Vincat Style Seat
+</Text>
+</View>
+                </View>
+               
+
 
 
 
@@ -59,7 +94,7 @@ Where
 
 <View style={styles.inputContainer}>
 <TextInput
-placeholder="Email"
+placeholder="Location"
 placeholderColor="#c4c3cb"
 style={styles.loginFormTextInput}
 onChangeText={TextInputValue =>
@@ -81,7 +116,7 @@ When
 
 <View style={styles.inputContainer}>
 <TextInput
-placeholder="Email"
+placeholder="Time"
 placeholderColor="#c4c3cb"
 style={styles.loginFormTextInput}
 onChangeText={TextInputValue =>
@@ -100,13 +135,16 @@ What
 </Text>
 </View>
 
-<View style={[styles.loginFormTextInput,{height:70,width:'95%'}]}>
+<View style={{height:43,width:'100%',alignItems:'center'}}>
 
-<Dropdown
-
-
-data={whatData}
-/>
+<Picker
+               // selectedValue={this.state.UserType}
+               // onValueChange={this.updateUser}
+                style={{width:'90%'}}>
+                <Picker.Item label="Select Category..." value="empty" />
+                <Picker.Item label="Type 1" value="student" />
+                <Picker.Item label="Type 2" value="teacher" />
+              </Picker>
 </View>
 
 
@@ -117,7 +155,7 @@ data={whatData}
       
     } >
        
-<TouchableHighlight onPress={() => this.props.navigation.navigate('HomeScreen')} >
+<TouchableHighlight onPress={() => this.props.navigation.openDrawer()} >
 
 <Text style={{ color: 'black', fontSize: 12, }}>
 
@@ -127,7 +165,7 @@ Search
 </TouchableHighlight>
     </View>
 </View>
-<View style={{marginTop:30,marginLeft:20}}>
+<View style={{marginTop:20,marginLeft:20}}>
 
 <View>
 
@@ -144,6 +182,40 @@ Step into your Swager
 </View>
 
 <View style={{flexDirection:'row',marginTop:10}}>
+<View
+style={{
+flex: 1,
+
+justifyContent: 'center',
+alignItems: 'center',
+marginTop: 0,
+}}>
+<TouchableHighlight>
+<Card style={{width: 130, height: 180}}>
+<View
+style={{
+flexDirection: 'column',
+justifyContent: 'center',
+flex: 1,
+flexDirection: 'column',
+alignItems: 'center',
+}}>
+<Image
+style={{height: 140, width: 120}}
+source={require ('../../../assets/images/haircut.jpg')}></Image>
+<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
+    <Text style={{fontWeight:'bold',fontSize:16}}>
+        Haircut
+    </Text>
+</View>
+
+
+</View>
+</Card>
+</TouchableHighlight>
+</View>
+
+
 
 <View
 style={{
@@ -164,9 +236,9 @@ flexDirection: 'column',
 alignItems: 'center',
 }}>
 <Image
-style={{height: 120, width: 120}}
+style={{height: 140, width: 120}}
 source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View>
+<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
     <Text style={{fontWeight:'bold',fontSize:16}}>
         Haircut
     </Text>
@@ -200,9 +272,9 @@ flexDirection: 'column',
 alignItems: 'center',
 }}>
 <Image
-style={{height: 120, width: 120}}
+style={{height: 140, width: 120}}
 source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View>
+<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
     <Text style={{fontWeight:'bold',fontSize:16}}>
         Haircut
     </Text>
@@ -218,47 +290,42 @@ source={require ('../../../assets/images/haircut.jpg')}></Image>
 
 
 
-
-<View
-style={{
-flex: 1,
-
-justifyContent: 'center',
-alignItems: 'center',
-marginTop: 0,
-}}>
-<TouchableHighlight>
-<Card style={{width: 130, height: 180}}>
-<View
-style={{
-flexDirection: 'column',
-justifyContent: 'center',
-flex: 1,
-flexDirection: 'column',
-alignItems: 'center',
-}}>
-<Image
-style={{height: 120, width: 120}}
-source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View>
-    <Text style={{fontWeight:'bold',fontSize:16}}>
-        Haircut
-    </Text>
 </View>
-
-
-</View>
-</Card>
-</TouchableHighlight>
-</View>
-
-
-
-
-</View>
-
-
 <View style={{flexDirection:'row',marginTop:10}}>
+<View
+style={{
+flex: 1,
+
+justifyContent: 'center',
+alignItems: 'center',
+marginTop: 0,
+}}>
+<TouchableHighlight>
+<Card style={{width: 130, height: 180}}>
+<View
+style={{
+flexDirection: 'column',
+justifyContent: 'center',
+flex: 1,
+flexDirection: 'column',
+alignItems: 'center',
+}}>
+<Image
+style={{height: 140, width: 120}}
+source={require ('../../../assets/images/haircut.jpg')}></Image>
+<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
+    <Text style={{fontWeight:'bold',fontSize:16}}>
+        Haircut
+    </Text>
+</View>
+
+
+</View>
+</Card>
+</TouchableHighlight>
+</View>
+
+
 
 <View
 style={{
@@ -279,9 +346,9 @@ flexDirection: 'column',
 alignItems: 'center',
 }}>
 <Image
-style={{height: 120, width: 120}}
+style={{height: 140, width: 120}}
 source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View>
+<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
     <Text style={{fontWeight:'bold',fontSize:16}}>
         Haircut
     </Text>
@@ -315,9 +382,9 @@ flexDirection: 'column',
 alignItems: 'center',
 }}>
 <Image
-style={{height: 120, width: 120}}
+style={{height: 140, width: 120}}
 source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View>
+<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
     <Text style={{fontWeight:'bold',fontSize:16}}>
         Haircut
     </Text>
@@ -333,45 +400,7 @@ source={require ('../../../assets/images/haircut.jpg')}></Image>
 
 
 
-
-<View
-style={{
-flex: 1,
-
-justifyContent: 'center',
-alignItems: 'center',
-marginTop: 0,
-}}>
-<TouchableHighlight>
-<Card style={{width: 130, height: 180}}>
-<View
-style={{
-flexDirection: 'column',
-justifyContent: 'center',
-flex: 1,
-flexDirection: 'column',
-alignItems: 'center',
-}}>
-<Image
-style={{height: 120, width: 120}}
-source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View>
-    <Text style={{fontWeight:'bold',fontSize:16}}>
-        Haircut
-    </Text>
 </View>
-
-
-</View>
-</Card>
-</TouchableHighlight>
-</View>
-
-
-
-
-</View>
-
 
 </View>
 
