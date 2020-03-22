@@ -2,9 +2,6 @@
 import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-
-
-
 import MainMenuScreen from '../MainMenuScreen/index.js'
 import LoginSignupScreen from '../SignupLoginScreen/index.js'
 import LoginScreen from '../LoginScreen/index'
@@ -13,6 +10,22 @@ import HomeScreen from '../HomeScreen/index.js'
 
 
 
+
+
+
+// const Drawer = createDrawerNavigator();
+
+//  function App() {
+//   return (
+//     <NavigationContainer>
+//       <Drawer.Navigator initialRouteName="Home">
+//         <Drawer.Screen name="Home" component={HomeScreen} />
+//         <Drawer.Screen name="Signup" component={SignupScreen} />
+//       </Drawer.Navigator>
+//     </NavigationContainer>
+//   );
+//   }
+  
 const Stack = createStackNavigator()
 
 function MainStackNavigator() {

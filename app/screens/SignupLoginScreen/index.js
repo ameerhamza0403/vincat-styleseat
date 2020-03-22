@@ -17,7 +17,7 @@ import {
 } from 'react-native';
 
 import styles from './Styles'
-import SignupLoginTabs from '../SignupLoginTabs/index'
+
 
 
 
