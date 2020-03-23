@@ -142,8 +142,8 @@ What
                // onValueChange={this.updateUser}
                 style={{width:'90%'}}>
                 <Picker.Item label="Select Category..." value="empty" />
-                <Picker.Item label="Type 1" value="student" />
-                <Picker.Item label="Type 2" value="teacher" />
+                <Picker.Item label="Type 1" value="type1" />
+                <Picker.Item label="Type 2" value="type2" />
               </Picker>
 </View>
 
@@ -155,9 +155,9 @@ What
       
     } >
        
-<TouchableHighlight onPress={() => this.props.navigation.openDrawer()} >
+<TouchableHighlight  >
 
-<Text style={{ color: 'black', fontSize: 12, }}>
+<Text style={{ color: 'white', fontSize: 12, }}>
 
 Search
 </Text>
@@ -182,40 +182,6 @@ Step into your Swager
 </View>
 
 <View style={{flexDirection:'row',marginTop:10}}>
-<View
-style={{
-flex: 1,
-
-justifyContent: 'center',
-alignItems: 'center',
-marginTop: 0,
-}}>
-<TouchableHighlight>
-<Card style={{width: 130, height: 180}}>
-<View
-style={{
-flexDirection: 'column',
-justifyContent: 'center',
-flex: 1,
-flexDirection: 'column',
-alignItems: 'center',
-}}>
-<Image
-style={{height: 140, width: 120}}
-source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
-    <Text style={{fontWeight:'bold',fontSize:16}}>
-        Haircut
-    </Text>
-</View>
-
-
-</View>
-</Card>
-</TouchableHighlight>
-</View>
-
-
 
 <View
 style={{
@@ -236,10 +202,10 @@ flexDirection: 'column',
 alignItems: 'center',
 }}>
 <Image
-style={{height: 140, width: 120}}
+style={{height: 120, width: 120,borderRadius:150}}
 source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
-    <Text style={{fontWeight:'bold',fontSize:16}}>
+<View style={{backgroundColor:'#9C26B0' ,width:'100%',alignItems:'center',height:25,marginTop:15}}>
+    <Text style={{fontWeight:'bold',color:'white',fontSize:16}}>
         Haircut
     </Text>
 </View>
@@ -249,8 +215,6 @@ source={require ('../../../assets/images/haircut.jpg')}></Image>
 </Card>
 </TouchableHighlight>
 </View>
-
-
 
 
 <View
@@ -272,10 +236,10 @@ flexDirection: 'column',
 alignItems: 'center',
 }}>
 <Image
-style={{height: 140, width: 120}}
+style={{height: 120, width: 120,borderRadius:150}}
 source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
-    <Text style={{fontWeight:'bold',fontSize:16}}>
+<View style={{backgroundColor:'#9C26B0' ,width:'100%',alignItems:'center',height:25,marginTop:15}}>
+    <Text style={{fontWeight:'bold',color:'white',fontSize:16}}>
         Haircut
     </Text>
 </View>
@@ -289,43 +253,45 @@ source={require ('../../../assets/images/haircut.jpg')}></Image>
 
 
 
+<View
+style={{
+flex: 1,
+
+justifyContent: 'center',
+alignItems: 'center',
+marginTop: 0,
+}}>
+<TouchableHighlight>
+<Card style={{width: 130, height: 180}}>
+<View
+style={{
+flexDirection: 'column',
+justifyContent: 'center',
+flex: 1,
+flexDirection: 'column',
+alignItems: 'center',
+}}>
+<Image
+style={{height: 120, width: 120,borderRadius:150}}
+source={require ('../../../assets/images/haircut.jpg')}></Image>
+<View style={{backgroundColor:'#9C26B0' ,width:'100%',alignItems:'center',height:25,marginTop:15}}>
+    <Text style={{fontWeight:'bold',color:'white',fontSize:16}}>
+        Haircut
+    </Text>
+</View>
+
 
 </View>
+</Card>
+</TouchableHighlight>
+</View>
+
+
+
+</View>
+
+
 <View style={{flexDirection:'row',marginTop:10}}>
-<View
-style={{
-flex: 1,
-
-justifyContent: 'center',
-alignItems: 'center',
-marginTop: 0,
-}}>
-<TouchableHighlight>
-<Card style={{width: 130, height: 180}}>
-<View
-style={{
-flexDirection: 'column',
-justifyContent: 'center',
-flex: 1,
-flexDirection: 'column',
-alignItems: 'center',
-}}>
-<Image
-style={{height: 140, width: 120}}
-source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
-    <Text style={{fontWeight:'bold',fontSize:16}}>
-        Haircut
-    </Text>
-</View>
-
-
-</View>
-</Card>
-</TouchableHighlight>
-</View>
-
-
 
 <View
 style={{
@@ -346,10 +312,10 @@ flexDirection: 'column',
 alignItems: 'center',
 }}>
 <Image
-style={{height: 140, width: 120}}
+style={{height: 120, width: 120,borderRadius:150}}
 source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
-    <Text style={{fontWeight:'bold',fontSize:16}}>
+<View style={{backgroundColor:'#9C26B0' ,width:'100%',alignItems:'center',height:25,marginTop:15}}>
+    <Text style={{fontWeight:'bold',color:'white',fontSize:16}}>
         Haircut
     </Text>
 </View>
@@ -359,8 +325,6 @@ source={require ('../../../assets/images/haircut.jpg')}></Image>
 </Card>
 </TouchableHighlight>
 </View>
-
-
 
 
 <View
@@ -382,10 +346,10 @@ flexDirection: 'column',
 alignItems: 'center',
 }}>
 <Image
-style={{height: 140, width: 120}}
+style={{height: 120, width: 120,borderRadius:150}}
 source={require ('../../../assets/images/haircut.jpg')}></Image>
-<View style={{borderColor:'black' , borderWidth:2.5,width:'100%',alignItems:'center',height:30,marginTop:10}}>
-    <Text style={{fontWeight:'bold',fontSize:16}}>
+<View style={{backgroundColor:'#9C26B0' ,width:'100%',alignItems:'center',height:25,marginTop:15}}>
+    <Text style={{fontWeight:'bold',color:'white',fontSize:16}}>
         Haircut
     </Text>
 </View>
@@ -399,8 +363,44 @@ source={require ('../../../assets/images/haircut.jpg')}></Image>
 
 
 
+<View
+style={{
+flex: 1,
+
+justifyContent: 'center',
+alignItems: 'center',
+marginTop: 0,
+}}>
+<TouchableHighlight>
+<Card style={{width: 130, height: 180}}>
+<View
+style={{
+flexDirection: 'column',
+justifyContent: 'center',
+flex: 1,
+flexDirection: 'column',
+alignItems: 'center',
+}}>
+<Image
+style={{height: 120, width: 120,borderRadius:150}}
+source={require ('../../../assets/images/haircut.jpg')}></Image>
+<View style={{backgroundColor:'#9C26B0' ,width:'100%',alignItems:'center',height:25,marginTop:15}}>
+    <Text style={{fontWeight:'bold',color:'white',fontSize:16}}>
+        Haircut
+    </Text>
+</View>
+
 
 </View>
+</Card>
+</TouchableHighlight>
+</View>
+
+
+
+</View>
+
+
 
 </View>
 
