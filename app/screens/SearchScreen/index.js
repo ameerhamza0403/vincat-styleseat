@@ -40,7 +40,7 @@ export default class  SearchScreen extends React.Component {
         height:Dimensions.get('window').height}]}>
           
           
-          <View style={{flexDirection:'row',backgroundColor:'#9C26B0',borderColor:'#AF2489',borderWidth:2,width:'100%',height:50}}>
+          <View style={{flexDirection:'row',backgroundColor:'#9C26B0',width:'100%',height:50}}>
           <View style={{width:'80%',marginTop:0,height:40,marginLeft:3,marginBottom:0,flexDirection:'row',}}>
          <Icon name="shield-search" size={28} color="#fff"  style={{marginRight:3,marginTop:5}} />
           
