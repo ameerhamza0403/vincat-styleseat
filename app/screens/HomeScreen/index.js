@@ -191,7 +191,7 @@ justifyContent: 'center',
 alignItems: 'center',
 marginTop: 0,
 }}>
-<TouchableHighlight>
+<TouchableHighlight onPress={() => this.props.navigation.navigate('Search')} >
 <Card style={{width: 130, height: 180}}>
 <View
 style={{

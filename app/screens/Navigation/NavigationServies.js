@@ -7,6 +7,7 @@ import LoginSignupScreen from '../SignupLoginScreen/index.js'
 import LoginScreen from '../LoginScreen/index'
 import SignupScreen from  '../SignupScreen/index.js'
 import HomeScreen from '../HomeScreen/index.js'
+import SearchScreen from '../SearchScreen/index.js'
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -66,6 +67,11 @@ function MainStackNavigator() {
 <Stack.Screen
           name='HomeScreen'
           component={HomeScreen}
+                  />
+                  
+<Stack.Screen
+          name='Search'
+          component={SearchScreen}
                   />
            
       </Stack.Navigator>

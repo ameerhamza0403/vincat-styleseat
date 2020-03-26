@@ -4,6 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SignupLoginScreen from '../SignupLoginScreen/index'
 import LinearGradient from 'react-native-linear-gradient';
 
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+
 import {
     StyleSheet,
     View,
@@ -55,15 +57,33 @@ Setup your account
 <View style={styles.btnBack
                       
                     } >
-                      <Image
-                      style={styles.btnIcon}
-  source={require ('../../../assets/images/facebook.png')}
-  />
+     <Icon 
+     style={{marginRight:10}}
+            name ={'facebook-box'} color={'white'} size={40}/>
                        
-<TouchableHighlight onPress={() => navigation.navigate('LoginSignup')} >
+                       
+<TouchableHighlight  >
 
 
-<Text style={{ color: 'white', fontSize: 12, }}>
+<Text style={{ width:130,color: 'white', fontSize: 12, }}>
+
+Continue with Facebook
+</Text>
+
+</TouchableHighlight>
+                    </View>
+                    <View style={styles.btnBack
+                      
+                    } >
+     <Icon 
+     style={{marginRight:10}}
+            name ={'gmail'} color={'white'} size={40}/>
+                       
+                       
+<TouchableHighlight  >
+
+
+<Text style={{ width:130,color: 'white', fontSize: 12, }}>
 
 Continue with Facebook
 </Text>
@@ -71,24 +91,7 @@ Continue with Facebook
 </TouchableHighlight>
                     </View>
 
-                    <View style={styles.btnBack
-                      
-                    } >
-                      <Image
-                      style={styles.btnIcon}
-  source={require ('../../../assets/images/gmail.png')}
-  />
-                       
-<TouchableHighlight onPress={() => this.props.navigation.navigate('LoginSignup')} >
-
-
-<Text style={{ color: 'white', fontSize: 12, }}>
-
-Continue with Gmail
-</Text>
-
-</TouchableHighlight>
-                    </View>
+               
                     <View style={{alignItems:'center',marginTop:20}}>
                       <Text style={{color:'white'}}>
                         Or 

@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SignupLoginScreen from '../SignupLoginScreen/index'
 import LinearGradient from 'react-native-linear-gradient';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import {
     StyleSheet,
@@ -53,15 +54,15 @@ Login your Account
 <View style={styles.btnBack
                       
                     } >
-                      <Image
-                      style={styles.btnIcon}
-  source={require ('../../../assets/images/facebook.png')}
-  />
+     <Icon 
+     style={{marginRight:10}}
+            name ={'facebook-box'} color={'white'} size={40}/>
+                       
                        
 <TouchableHighlight  >
 
 
-<Text style={{ color: 'white', fontSize: 12, }}>
+<Text style={{ width:130,color: 'white', fontSize: 12, }}>
 
 Continue with Facebook
 </Text>
@@ -72,15 +73,14 @@ Continue with Facebook
                     <View style={styles.btnBack
                       
                     } >
-                      <Image
-                      style={styles.btnIcon}
-  source={require ('../../../assets/images/gmail.png')}
-  />
+        <Icon 
+     style={{marginRight:10}}
+            name ={'gmail'} color={'white'} size={40}/>
                        
 <TouchableHighlight >
 
 
-<Text style={{ color: 'white', fontSize: 12, }}>
+<Text style={{ width:130,color: 'white', fontSize: 12, }}>
 
 Continue with Gmail
 </Text>

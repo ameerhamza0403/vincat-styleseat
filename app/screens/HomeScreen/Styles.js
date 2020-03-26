@@ -31,15 +31,15 @@ export default {
       btnBack:{
         
         borderRadius:20,
-        borderWidth:1,
+
     width:'40%',
         marginTop:20,
         height:40,
         backgroundColor:'#9C26B0',
-flexDirection:'row',
+        flexDirection:'row',
         alignItems:'center',
         justifyContent:'center',
-        justifyContent:'center'
+      
 
 
       
